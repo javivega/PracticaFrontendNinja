@@ -1,0 +1,36 @@
+.navbar {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 100%;
+	background-color: $body-background-color;
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+
+	.navbar-list {
+		font-size: 0px;
+		list-style: none;
+
+		.navbar-item {
+			display: inline-block;
+			font-size: $font-size-base;
+			text-align: center;
+
+			.navbar-link {
+				display: inline-block;
+				text-decoration: none;
+				padding: 18px;
+				color: $secondary-color;
+				text-transform: uppercase;
+				font-family: $main-font-family;
+				transition: color 0.2s;
+				&:hover {
+					color: darken($secondary-color, 10%);
+				}
+
+			}
+		}
+	}
+
+}

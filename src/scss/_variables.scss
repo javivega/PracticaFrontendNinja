@@ -1,0 +1,33 @@
+//fonts
+
+$main-font-family: 'Raleway', sans-serif;
+$titles-font-family: 'Montserrat', sans-serif;
+
+
+// font sizes
+$font-size-base: 16px;
+$font-size-small: $font-size-base - 6px;
+$font-size-large: $font-size-base + 12px;
+$font-size-h1: $font-size-base + 15px;
+$font-size-h2: $font-size-base + 12px;
+$font-size-h3: $font-size-base + 9px;
+$font-size-h4: $font-size-base + 6px;
+$font-size-h5: $font-size-base + 3px;
+$font-size-h6: $font-size-base;
+
+
+//colors
+
+$primary-color: #E5E2E2;
+$secondary-color: #319F9B;
+$terciary-color: #191919;
+$main-text-color: $terciary-color;
+$body-background-color: $primary-color;
+
+//border radius
+$border-radius-default: 5px;
+
+
+
+
+

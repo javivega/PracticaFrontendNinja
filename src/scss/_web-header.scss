@@ -1,0 +1,36 @@
+//variables
+
+@mixin header-pos ($top: 50%, $left: 50%) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate(-50%, -50%);
+}
+
+.web-header {
+	background-color: $secondary-color;
+	height: 40vh;
+	width: 100%;
+	position: relative;
+
+	.web-header-block {
+
+		.web-header-title {
+			font-family: $main-font-family;
+			color: white;
+			font-size: $font-size-large;
+			@include header-pos;
+		}
+
+		.web-header-input {
+
+			@include header-pos(60%, 50%);
+			border-radius: $border-radius-default;
+			width: 35%;
+			padding: 5px;
+		}
+
+	}
+
+
+}
