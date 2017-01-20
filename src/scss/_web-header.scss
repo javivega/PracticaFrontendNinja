@@ -1,17 +1,15 @@
 //variables
 
-@mixin header-pos ($top: 50%, $left: 50%) {
-	position: absolute;
-	top: $top;
-	left: $left;
-	transform: translate(-50%, -50%);
-}
 
 .web-header {
 	background-color: $secondary-color;
-	height: 40vh;
+	height: 20vh;
 	width: 100%;
 	position: relative;
+
+	@include if-is-large-screen {
+		height: 40vh;
+	}
 
 	.web-header-block {
 
