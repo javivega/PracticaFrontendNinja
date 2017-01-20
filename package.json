@@ -1,0 +1,25 @@
+{
+  "name": "practicafrontendninja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javivega/PracticaFrontendNinja.git"
+  },
+  "author": "Miguel Angel Arribas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javivega/PracticaFrontendNinja/issues"
+  },
+  "homepage": "https://github.com/javivega/PracticaFrontendNinja#readme",
+  "devDependencies": {
+    "browserify": "^13.3.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
