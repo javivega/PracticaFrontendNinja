@@ -1,12 +1,14 @@
 .navbar {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	width: 100%;
-	background-color: $body-background-color;
-	position: fixed;
-	top: 0px;
-	z-index: 1;
+    display: none;
+
+    @include if-is-medium-screen {
+        display: flex;
+	    flex-flow: row wrap;
+	    justify-content: center;
+	    width: 100%;
+	    background-color: $body-background-color;
+    }
+
 
 	.navbar-list {
 		font-size: 0px;

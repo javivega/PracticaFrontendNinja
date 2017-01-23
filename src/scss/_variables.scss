@@ -20,9 +20,9 @@ $line-heigth-default: 1.2;
 
 //colors
 
-$primary-color: #E5E2E2;
-$secondary-color: #319F9B;
-$terciary-color: #191919;
+$primary-color: #F7F7F7;
+$secondary-color: #292929;
+$terciary-color: #2E2E2D;
 $main-text-color: $terciary-color;
 $body-background-color: $primary-color;
 
@@ -34,6 +34,10 @@ $border-radius-default: 5px;
 $large-screen-width: 1024px;
 $medium-screen-width: 768px;
 $small-screen-width: $medium-screen-width -1;
+
+//margins, spacings, paddings
+
+$default-letter-spacing: 1.2px;
 
 
 
