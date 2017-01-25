@@ -1,38 +1,83 @@
-.navbar {
-    display: none;
+.wrap {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0px 20px;
 
-    @include if-is-medium-screen {
-        display: flex;
-	    flex-flow: row wrap;
-	    justify-content: center;
-	    width: 100%;
-	    background-color: $body-background-color;
+    .btn-menu {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        display: block;
+         @include if-is-medium-screen {
+           display: none;
+    }
+    }
+    .logo {
+        float: left;
+        .logo-title {
+            margin: 0;
+            .logo-link {
+                display: inline-block;
+                text-decoration: none;
+                color: $primary-color;
+                text-transform: uppercase;
+                font-family: $header-font-family;
+                height: 60px;
+                line-height: 60px;
+                word-wrap: no-wrap;
+                font-size: $font-size-base * 1.2;
+                   @include if-is-medium-screen {
+           display: none;
     }
 
+            }
+        }
+    }
+}
 
-	.navbar-list {
-		font-size: 0px;
-		list-style: none;
+button {
+    background-color: darken($secondary-color, 30%);
+    border: none;
+    border-radius: $border-radius-default;
+    color: $primary-color;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px;
+}
 
-		.navbar-item {
-			display: inline-block;
-			font-size: $font-size-base;
-			text-align: center;
-
-			.navbar-link {
-				display: inline-block;
-				text-decoration: none;
-				padding: 18px;
-				color: $secondary-color;
-				text-transform: uppercase;
-				font-family: $main-font-family;
-				transition: color 0.2s;
-				&:hover {
-					color: darken($secondary-color, 10%);
-				}
-
-			}
-		}
-	}
-
+.navbar {
+    height: 60px;
+    width: 100%;
+    position: relative;
+    background-color: $secondary-color;
+    z-index: -1;
+    margin-bottom: 20px;
+    @include if-is-medium-screen {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background-color: $body-background-color;
+        margin-bottom: 0px;
+    }
+    .navbar-list {
+        font-size: 0px;
+        list-style: none;
+        .navbar-item {
+            display: inline-block;
+            font-size: $font-size-base;
+            text-align: center;
+            .navbar-link {
+                display: inline-block;
+                text-decoration: none;
+                padding: 10px;
+                color: $secondary-color;
+                text-transform: uppercase;
+                font-family: $main-font-family;
+                transition: color 0.2s;
+                &:hover {
+                    color: darken($secondary-color, 10%);
+                }
+            }
+        }
+    }
 }

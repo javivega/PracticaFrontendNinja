@@ -1,5 +1,7 @@
 .container {
-	padding: 20px 40px;
+	margin: 0 auto;
+    max-width: 1200px;
+    padding: 0px 20px;
 	@include if-is-medium-screen {
 		display: flex;
 		flex-flow: row wrap;
