@@ -5,9 +5,29 @@
 
     .btn-menu {
         position: absolute;
-        right: 20px;
+        right: 25px;
         top: 15px;
-        display: block;
+        height: 30px;
+        width: 30px;
+
+        span {
+            @include menu-lines;
+            top: 50%;
+            transition: height 0.1s;
+            &:after, &:before {
+                content: "";
+                @include menu-lines;
+                margin-left: -15px;
+                transition: all 200ms;
+
+            }
+            &:after {
+                top: -7px;
+            }
+            &:before {
+                bottom: -7px;
+            }
+        }
          @include if-is-medium-screen {
            display: none;
     }
@@ -35,6 +55,7 @@
     }
 }
 
+/*
 button {
     background-color: darken($secondary-color, 30%);
     border: none;
@@ -44,6 +65,8 @@ button {
     font-weight: bold;
     padding: 5px;
 }
+*/
+
 
 .navbar {
     height: 60px;

@@ -1,23 +1,28 @@
-
-
-
+//utils
+@mixin menu-lines {
+    background-color: white;
+    border-radius: 1px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+}
 
 //media queries
-
 @mixin if-is-large-screen {
-	@media all and (min-width: #{$large-screen-width}){
-		@content;
-	}
+    @media all and (min-width: #{$large-screen-width}) {
+        @content;
+    }
 }
 
 @mixin if-is-medium-screen {
-	@media all and (min-width: #{$medium-screen-width}){
-		@content;
-	}
+    @media all and (min-width: #{$medium-screen-width}) {
+        @content;
+    }
 }
 
 @mixin if-is-small-screen {
-	@media all and (max-width: #{$small-screen-width}){
-		@content;
-	}
+    @media all and (max-width: #{$small-screen-width}) {
+        @content;
+    }
 }

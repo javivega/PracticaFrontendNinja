@@ -3,6 +3,9 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync').create();
+var browserify = require('browserify');
+var tap = require('gulp-tap');
+var buffer = require('gulp-buffer');
 
 
 
@@ -16,6 +19,21 @@ gulp.task('compile-sass', function(){
 	.pipe(browserSync.stream())
 	.pipe(notify("Sass Compilado"));
 });
+
+//concatenamos js
+
+gulp.task('concat-js', function(){
+    gulp.src('./src/js/main.js')
+    .pipe(tap(function(file){
+        file.contents = browserify(file.path, {debug:true}).bundle().on('error', function(error){
+            return notify().write(error);
+        });
+    }))
+    .pipe(buffer())
+    .pipe(gulp.dest('./dist/'))
+    .pipe(notify("JS concatenado"))
+    .pipe(browserSync.stream());
+})
 
 //tarea por defecto
 
