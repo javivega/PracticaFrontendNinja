@@ -167,7 +167,7 @@
     }
     #searchform {
         position: absolute;
-        bottom: 20%;
+        bottom: 22%;
         left: 50%;
         height: 20px;
         line-height: 20px;
@@ -176,20 +176,18 @@
         padding: 6px;
         background-color: $primary-color;
         transform: translateX(-50%);
-
         @include if-is-medium-screen {
             transform: translateX(0);
             position: static;
             align-self: center;
+            margin-right: 30px;
         }
-
-        .fa-search{
+        .fa-search {
             color: lighten($secondary-color, 50%);
         }
         label {
             padding-left: 1px;
             display: inline-block;
-
             color: lighten($secondary-color, 50%);
         }
         #search-input {
@@ -207,6 +205,34 @@
                 width: 8em;
                 opacity: 1;
             }
+        }
+    }
+    .login-button {
+        position: absolute;
+        bottom: 14%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        color: $primary-color;
+        background-color: $secondary-color;
+        font-family: $main-font-family;
+        font-size: $font-size-base;
+        border-radius: 3em;
+        height: 35px;
+        line-height: 35px;
+        text-transform: capitalize;
+        transition: all 0.3s;
+        padding: 0 20px;
+        cursor: pointer;
+        @include if-is-medium-screen {
+            align-self: center;
+            transform: translateX(0);
+            position: static;
+
+        }
+        &:hover {
+            background-color: lighten($secondary-color, 50%);
+            color: darken($secondary-color, 50%);
         }
     }
 }
