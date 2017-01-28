@@ -1,0 +1,56 @@
+.post-detail {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    .post-autor {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        @include if-is-medium-screen {
+            justify-content: flex-start;
+        }
+        .post-autor-img {
+            width: 8%;
+            height: auto;
+            border-radius: 8em;
+            margin: 0.5em;
+             @include if-is-medium-screen {
+            width: 4%;
+        }
+        }
+    }
+    .post-img-detail {
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        margin-top: 14px;
+    }
+    .post-content-detail {
+        font-family: $main-font-family;
+        width: 100;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        line-height: $default-letter-spacing;
+        .post-title {
+            font-family: $titles-font-family;
+            font-size: $font-size-h2 - 4px;
+            text-transform: uppercase;
+            margin: 12px auto;
+        }
+        .post-date-detail {
+            margin-top: 0.5em;
+        }
+        .post-text {
+            margin-bottom: 12px;
+            line-height: $default-letter-spacing + 0.2;
+            word-spacing: 1px;
+            text-align: justify;
+            @include if-is-medium-screen {}
+        }
+    }
+}
