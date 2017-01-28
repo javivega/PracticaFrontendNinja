@@ -37,7 +37,7 @@ gulp.task('concat-js', function(){
 
 //tarea por defecto
 
-gulp.task('default', ['compile-sass'], function(){
+gulp.task('default', ['compile-sass', 'concat-js'], function(){
 	browserSync.init({
 		server: "./"
 	});
