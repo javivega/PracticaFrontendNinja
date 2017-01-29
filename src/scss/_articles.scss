@@ -5,8 +5,8 @@
 	@include if-is-medium-screen {
 		display: flex;
 		flex-flow: row wrap;
-		align-items: center;
-		justify-content: center;
+		align-items: stretch;
+
 
 	}
 }
@@ -14,7 +14,9 @@
 .post {
 	font-family: $main-font-family;
 	background-color: white;;
-	margin-bottom: 14px;
+	margin-bottom: 22px;
+    box-shadow: 0px 2px 14px 5px rgba(0,0,0,0.2);
+
 
 
 	@include if-is-medium-screen {
@@ -27,9 +29,9 @@
 		height: auto;
 	}
 	.post-content {
-		padding: 20px 30px;
+		padding: 8px 30px;
 		display: flex;
-		flex-direction: column;
+		flex-flow: column wrap;
 		align-items: center;
 		justify-content: center;
 
@@ -37,9 +39,40 @@
 			font-size: $font-size-h1;
 			font-family: $titles-font-family;
 			color: lighten($terciary-color, 20%);
-			line-height: $line-heigth-default;
 			margin-bottom: 10px;
 		}
+
+        .post-text {
+            @include format-text;
+            .texto-oculto {
+                display: none;
+                &.shown {
+                    display: block;
+                }
+            }
+        }
+
+        .post-detail {
+            margin-top: 16px;
+        }
+
+
 	}
+}
+
+ .social-content {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                padding: 0.8em;
+                i.fa-comment {
+                    align-self: flex-end;
+                }
+
+
+        }
 }
 

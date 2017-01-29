@@ -8,6 +8,12 @@
     left: 50%;
 }
 
+@mixin format-text {
+    line-height: $line-heigth-default + 0.2;
+    word-spacing: 1px;
+
+}
+
 //media queries
 @mixin if-is-large-screen {
     @media all and (min-width: #{$large-screen-width}) {

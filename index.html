@@ -1,90 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Mike Articles</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" href="src/reset.css">
-	<link rel="stylesheet" href="dist/style.css">
+    <meta charset="UTF-8">
+    <title>Mike Articles</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="dist/style.css"> </head>
 
-</head>
 <body>
-
     <div class="wrap">
         <header class="logo">
             <h1 class="logo-title">
                 <a href="#" class="logo-link">Mike Articles</a>
-            </h1>
-        </header>
-        <a class="btn-menu">
-            <span class="lines"></span>
-        </a>
+            </h1> </header>
+        <a class="btn-menu"> <span class="lines"></span> </a>
     </div>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="#" class="navbar-link">Todo</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Cultura</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Sociedad</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Deportes</a></li>
+            <li class="navbar-item"><a href="#" class="navbar-link">Ciencia</a></li>
+        </ul>
+        <form role="search" method="get" id="searchform">
+            <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i></label>
+            <input type="text" placeholder="Buscar..." id="search-input"> </form>
+        <button class="login-button">Login</button>
+        <button class="register-button">Registrate</button>
+    </nav>
+    <header class="web-header">
+        <h1 class="web-header-title">Mike Articles</h1>
+        <h2 class="web-header-subtitle">Web de artículos Keepcoding</h2> </header>
+    <section>
+        <div class="container">
+            <article class="post"> <img class="post-img" src="img/background-1932466_640.jpg" alt="post-img1" />
+                <div class="post-content">
+                    <div class="post-detail">
+                        <div class="post-content-detail">
+                            <div class="post-autor"> <img src="img/autor-img.JPG" alt="" class="post-autor-img">
+                                <p class="post-autor-name">Miguel Angel Arribas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="post-title">Titular 1</h1>
+                    <p class="post-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <!--
+                        </br><a href="#" class="leer-mas">Seguir leyendo...</a>
+                         <span class="texto-oculto">
+                            Possimus modi et voluptates dicta, iure distinctio eius accusantium magnam, voluptate aut sequi velit officiis ipsa ipsam, vero quo placeat. Rerum, architecto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis accusantium architecto voluptates quam eligendi, ut itaque sit voluptas assumenda autem doloribus harum expedita quae quaerat nam! Ad doloremque veritatis dignissimos.
+                        </span>
+                        --></p>
+                    <time class="post-date">20 de Enero de 2017</time>
 
+                    <div class="post-detail"> <a href="details.html" class="post-detail-link">Detalles</a> </div>
+                </div>
+                <div class="social-content">
+                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                       <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>3</a>
+                    </div>
+            </article>
+            <article class="post"> <img class="post-img" src="img/background-1932466_640.jpg" alt="post-img2" />
+                <div class="post-content">
+                    <time class="post-date">20 de Enero de 2017</time>
+                    <h1 class="post-title">Titular 4</h1>
+                    <p class="post-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi. </p>
+                    <div class="post-detail"> <a href="" class="post-detail-link">Detalles</a> </div>
+                </div>
+            </article>
+            <article class="post"> <img class="post-img" src="img/background-1932466_640.jpg" alt="post-img3" />
+                <div class="post-content">
+                    <time class="post-date">20 de Enero de 2017</time>
+                    <h1 class="post-title">Titular 3</h1>
+                    <p class="post-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi. </p>
+                    <div class="post-detail"> <a href="" class="post-detail-link">Detalles</a> </div>
+                </div>
+            </article>
+            <article class="post"> <img class="post-img" src="img/background-1932466_640.jpg" alt="post-img1" />
+                <div class="post-content">
+                    <div class="post-detail">
+                        <div class="post-content-detail">
+                            <div class="post-autor"> <img src="img/autor-img.JPG" alt="" class="post-autor-img">
+                                <p class="post-autor-name">Miguel Angel Arribas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="post-title">Titular 1</h1>
+                    <p class="post-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <!--
+                        </br><a href="#" class="leer-mas">Seguir leyendo...</a>
+                         <span class="texto-oculto">
+                            Possimus modi et voluptates dicta, iure distinctio eius accusantium magnam, voluptate aut sequi velit officiis ipsa ipsam, vero quo placeat. Rerum, architecto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis accusantium architecto voluptates quam eligendi, ut itaque sit voluptas assumenda autem doloribus harum expedita quae quaerat nam! Ad doloremque veritatis dignissimos.
+                        </span>
+                        --></p>
+                    <time class="post-date">20 de Enero de 2017</time>
 
-<nav class="navbar">
+                    <div class="post-detail"> <a href="details.html" class="post-detail-link">Detalles</a> </div>
+                </div>
+                <div class="social-content">
+                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                       <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>3</a>
+                    </div>
+            </article>
+            <article class="post"> <img class="post-img" src="img/background-1932466_640.jpg" alt="post-img1" />
+                <div class="post-content">
+                    <div class="post-detail">
+                        <div class="post-content-detail">
+                            <div class="post-autor"> <img src="img/autor-img.JPG" alt="" class="post-autor-img">
+                                <p class="post-autor-name">Miguel Angel Arribas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="post-title">Titular 1</h1>
+                    <p class="post-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <!--
+                        </br><a href="#" class="leer-mas">Seguir leyendo...</a>
+                         <span class="texto-oculto">
+                            Possimus modi et voluptates dicta, iure distinctio eius accusantium magnam, voluptate aut sequi velit officiis ipsa ipsam, vero quo placeat. Rerum, architecto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis accusantium architecto voluptates quam eligendi, ut itaque sit voluptas assumenda autem doloribus harum expedita quae quaerat nam! Ad doloremque veritatis dignissimos.
+                        </span>
+                        --></p>
+                    <time class="post-date">20 de Enero de 2017</time>
 
-	<ul class="navbar-list">
-		<li class="navbar-item"><a href="#" class="navbar-link">Todo</a></li>
-		<li class="navbar-item"><a href="#" class="navbar-link">Cultura</a></li>
-		<li class="navbar-item"><a href="#" class="navbar-link">Sociedad</a></li>
-		<li class="navbar-item"><a href="#" class="navbar-link">Deportes</a></li>
-		<li class="navbar-item"><a href="#" class="navbar-link">Ciencia</a></li>
-	</ul>
-	<form role="search" method="get" id="searchform">
-	    <label for="search-input"><i class="fa fa-search" aria-hidden="true"></i></label>
-	    <input type="text" placeholder="Buscar..." id="search-input">
-	</form>
-	<button class="login-button">Login</button>
+                    <div class="post-detail"> <a href="details.html" class="post-detail-link">Detalles</a> </div>
+                </div>
+                <div class="social-content">
+                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                       <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>3</a>
+                    </div>
+            </article>
+            <article class="post"> <img class="post-img" src="img/background-1932466_640.jpg" alt="post-img1" />
+                <div class="post-content">
+                    <div class="post-detail">
+                        <div class="post-content-detail">
+                            <div class="post-autor"> <img src="img/autor-img.JPG" alt="" class="post-autor-img">
+                                <p class="post-autor-name">Miguel Angel Arribas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="post-title">Titular 1</h1>
+                    <p class="post-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <!--
+                        </br><a href="#" class="leer-mas">Seguir leyendo...</a>
+                         <span class="texto-oculto">
+                            Possimus modi et voluptates dicta, iure distinctio eius accusantium magnam, voluptate aut sequi velit officiis ipsa ipsam, vero quo placeat. Rerum, architecto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis accusantium architecto voluptates quam eligendi, ut itaque sit voluptas assumenda autem doloribus harum expedita quae quaerat nam! Ad doloremque veritatis dignissimos.
+                        </span>
+                        --></p>
+                    <time class="post-date">20 de Enero de 2017</time>
 
-
-</nav>
-	<header class="web-header">
-	    <h1 class="web-header-title">Mike Articles</h1>
-		<h2 class="web-header-subtitle">Web de artículos Keepcoding</h2>
-	</header>
-	<section>
-		<div class="container">
-			<article class="post">
-				<img class="post-img"  src="img/background-1932466_640.jpg" alt="post-img1"/>
-				<div class="post-content">
-					<time class="post-date">20 de Enero de 2017</time>
-					<h1 class="post-title">Titular 1</h1>
-					<p class="post-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi.
-					<div class="post-detail">
-						<a href="details.html" class="post-detail-link">Detalles</a>
-					</div>
-				</div>
-			</article>
-			<article class="post">
-				<img class="post-img"  src="img/background-1932466_640.jpg" alt="post-img2"/>
-				<div class="post-content">
-					<time class="post-date">20 de Enero de 2017</time>
-					<h1 class="post-title">Titular 4</h1>
-					<p class="post-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi.
-					</p>
-					<div class="post-detail">
-						<a href="" class="post-detail-link">Detalles</a>
-					</div>
-				</div>
-			</article>
-			<article class="post">
-				<img class="post-img"  src="img/background-1932466_640.jpg" alt="post-img3"/>
-				<div class="post-content">
-					<time class="post-date">20 de Enero de 2017</time>
-					<h1 class="post-title">Titular 3</h1>
-					<p class="post-text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat deserunt exercitationem asperiores provident hic consequuntur dolor quasi.
-					</p>
-					<div class="post-detail">
-						<a href="" class="post-detail-link">Detalles</a>
-					</div>
-				</div>
-			</article>
-		</div>
-	</section>
-	<script src="dist/main.js"></script>
+                    <div class="post-detail"> <a href="details.html" class="post-detail-link">Detalles</a> </div>
+                </div>
+                <div class="social-content">
+                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                       <a href="#"><i class="fa fa-comment" aria-hidden="true"></i>3</a>
+                    </div>
+            </article>
+            </div>
+    </section>
+    <script src="dist/main.js"></script>
 </body>
+
 </html>

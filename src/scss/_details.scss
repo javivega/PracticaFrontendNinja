@@ -17,8 +17,11 @@
             height: auto;
             border-radius: 8em;
             margin: 0.5em;
+
              @include if-is-medium-screen {
-            width: 4%;
+            width: 8%;
+
+
         }
         }
     }
@@ -35,7 +38,7 @@
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        line-height: $default-letter-spacing;
+        line-height: $line-heigth-default;
         .post-title {
             font-family: $titles-font-family;
             font-size: $font-size-h2 - 4px;
@@ -47,9 +50,8 @@
         }
         .post-text {
             margin-bottom: 12px;
-            line-height: $default-letter-spacing + 0.2;
-            word-spacing: 1px;
             text-align: justify;
+            @include format-text;
             @include if-is-medium-screen {}
         }
     }
