@@ -208,41 +208,13 @@
         }
     }
     .login-button {
-        position: absolute;
-        bottom: 14%;
-        left: 50%;
-        transform: translateX(-50%);
-        border: none;
-        color: $primary-color;
-        background-color: $secondary-color;
-        font-family: $main-font-family;
-        font-size: $font-size-base;
-        border-radius: 3em;
-        border: 1px solid $secondary-color;
-        height: 35px;
-        line-height: 35px;
-        text-transform: capitalize;
-        transition: all 0.3s;
-        padding: 0 20px;
-        cursor: pointer;
-        @include if-is-medium-screen {
-            align-self: center;
-            transform: translateX(0);
-            position: static;
+        @include button-style($secondary-color, $primary-color, 14%);
 
-        }
-        &:hover {
-            background-color: lighten($secondary-color, 50%);
-            color: white;
-        }
     }
     .register-button {
-        @extend .login-button;
-        background-color: $primary-color;
-        color: $secondary-color;
-        bottom: 8%;
+        @include button-style($primary-color,$secondary-color, 8%);
         @include if-is-medium-screen {
-            margin-left: 0.5em;
+            margin-left: 1em;
         }
 
     }

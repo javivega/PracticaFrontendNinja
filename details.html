@@ -66,6 +66,32 @@
 			</article>
 		</div>
 	</section>
+	<section class="comments-section container">
+	    <div class="comments"></div>
+	    <div class="comments-form">
+	        <form class="contact-form" id="contact-form"name="contactame" novalidate>
+	            <div class="form-row">
+	                <input type="text" id="form-name" name"form-name" placeholder="Escribe tu nombre..." required>
+	                <span id="val-message-name">Por favor, necesito un nombre</span>
+	            </div>
+	             <div class="form-row">
+	                <input type="text" id="form-apellidos" name"form-apellidos" placeholder="Escribe tus apellidos..." required>
+	                <span id="val-message-surname">Por favor, necesito al menos un apellido</span>
+	            </div>
+	            <div class="form-row">
+	                <input type="email" id="form-email" name"form-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="Escribe tu email..." required>
+	                <span id="val-message-email">Por favor, necesito un email válido</span>
+	            </div>
+	            <div class="form-row">
+                    <textarea id="form-message" name"form-message" placeholder="Deja tu comentario..." required></textarea>
+	                <span id="val-message-textarea">Necesito un comentario (menor de 120 palabras)</span>
+	            </div>
+	            <div class="form-row">
+	                <button type="submit" id="form-submit">Enviar</button>
+	            </div>
+	        </form>
+	    </div>
+	</section>
 	<script src="dist/main.js"></script>
 </body>
 </html>
