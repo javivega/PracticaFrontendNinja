@@ -1,0 +1,16 @@
+.comments-section {
+    .comments {
+        .ui-ideal {
+            .comment-box {
+                box-sizing: border-box;
+                background-color: $secondary-color;
+                color: $primary-color;
+                max-width: 60%;
+                margin: 20px auto;
+                padding: 20px;
+                font-family: $main-font-family;
+                @include format-text;
+            }
+        }
+    }
+}
