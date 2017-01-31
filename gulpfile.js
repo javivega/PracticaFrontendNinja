@@ -6,6 +6,8 @@ var browserSync = require('browser-sync').create();
 var browserify = require('browserify');
 var tap = require('gulp-tap');
 var buffer = require('gulp-buffer');
+var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 
 
 //Config
@@ -25,12 +27,20 @@ var jsConfig = {
     dest: './dist/'
 };
 
+var uglifyConfig = {
+    uglifyTaskName: 'uglify',
+    src: './dist/main.js',
+    dest: './dist/'
+}
+
 //Compilamos SASS
 gulp.task(sassConfig.compileSassTaskName, function(){
 	gulp.src(sassConfig.entryPoint)
+    .pipe(sourcemaps.init())
 	.pipe(sass().on('error', function(error){
 		return notify().write(error);
 	}))
+    .pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(sassConfig.dest))
 	.pipe(browserSync.stream())
 	.pipe(notify("Sass Compilado"));
@@ -46,6 +56,8 @@ gulp.task(jsConfig.concatJsTaskName, function(){
         });
     }))
     .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true}))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(jsConfig.dest))
     .pipe(notify("JS concatenado"))
     .pipe(browserSync.stream());
@@ -53,12 +65,12 @@ gulp.task(jsConfig.concatJsTaskName, function(){
 
 //tarea por defecto
 
-gulp.task('default', [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName], function(){
+gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName], function(){
 	browserSync.init({
-		server: "./"
+		proxy: "127.0.0.1:8000"
 	});
 	//Vigila todos los archivos scss y cuando haya cambios lanza compile-sass
-	gulp.watch(sassConfig.watchFiles, sassConfig.compileSassTaskName);
+	gulp.watch(sassConfig.watchFiles, [sassConfig.compileSassTaskName]);
 	//Cualquier cambio en el html recarga el navegador
 	gulp.watch('./*.html', function(){
 		browserSync.reload();
@@ -67,6 +79,13 @@ gulp.task('default', [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName]
     gulp.watch(jsConfig.watchFiles, [jsConfig.concatJsTaskName]);
 
 });
+
+gulp.task(uglifyConfig.uglifyTaskName, function(){
+    gulp.src(uglifyConfig.src)
+    .pipe(uglify())
+    .pipe(gulp.dest(uglifyConfig.dest))
+    .pipe(notify("JS Minificado"));
+})
 
 
 

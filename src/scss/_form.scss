@@ -1,6 +1,8 @@
+.comments-section.no-comments-shown {
+    display: none;
+}
 
-
-.comments-section {
+.comments-section.comments-shown {
     .comments-form {
         width: 80%;
         margin: 0 auto;
