@@ -8,6 +8,9 @@ var tap = require('gulp-tap');
 var buffer = require('gulp-buffer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
 
 
 //Config
@@ -40,6 +43,7 @@ gulp.task(sassConfig.compileSassTaskName, function(){
 	.pipe(sass().on('error', function(error){
 		return notify().write(error);
 	}))
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(sassConfig.dest))
 	.pipe(browserSync.stream())
@@ -57,6 +61,7 @@ gulp.task(jsConfig.concatJsTaskName, function(){
     }))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true}))
+    .pipe(uglify());
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(jsConfig.dest))
     .pipe(notify("JS concatenado"))
@@ -80,6 +85,8 @@ gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName]
 
 });
 
+
+//minifica js
 gulp.task(uglifyConfig.uglifyTaskName, function(){
     gulp.src(uglifyConfig.src)
     .pipe(uglify())
