@@ -39,7 +39,7 @@ $(document).ready(function () {
         else {
             $('#val-message-email').css('display', 'none');
         }
-        if (wordsCount(comments.val()) > 120 || wordsCount(comments.val()) < 2) {
+        if (wordsCount(comments.val()) > 120 || wordsCount(comments.val()) < 1) {
             event.preventDefault();
             $('#val-message-textarea').css('display', 'block');
             comments.focus();

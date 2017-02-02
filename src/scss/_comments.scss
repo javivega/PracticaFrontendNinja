@@ -9,7 +9,8 @@
         &.blank .ui-blank {display: block;}
         &.loading .ui-loading {display: block;}
     }
-    .comments {
+    .comments.ideal {
+        width: 100%;
         .ui-ideal {
             .comment-box {
                 box-sizing: border-box;
