@@ -1,10 +1,16 @@
 #js--comments-section {
     display: none;
-    &.prueba {
+    &.comment-shown{
         display: block;
+        margin: 0;
+        padding: 0;
+        @include if-is-medium-screen {
+            margin: 0 auto;
+        }
     }
 }
 .comments-section {
+    width: 100%;
     .comments {
         div[class^="ui-"] {
             display: none;
@@ -30,11 +36,15 @@
                     box-sizing: border-box;
                     background-color: $secondary-color;
                     color: $primary-color;
-                    max-width: 60%;
+                    width: 60%;
                     margin: 20px auto;
-                    padding: 20px;
+                     padding: 20px;
                     font-family: $main-font-family;
                     @include format-text;
+                    @include if-is-medium-screen {
+                        max-width: 60%;
+
+                    }
                     .autor-line {
                         .autor-name {
                             color: #76daff;
