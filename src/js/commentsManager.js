@@ -35,5 +35,6 @@ module.exports = {
             html += '<article><div class="comment-box"><p class="autor-line"><span class="autor-name">' + comment.name + ' ' + comment.apellidos + ' ' + '</span>20 de abril del 90</p><div class="separator"></div><p class="autor-comment">' + comment.comentario + '</p></div></article>';
         }
         $(".ui-ideal").html(html);
-    }
+    },
+
 }
