@@ -10,9 +10,9 @@ module.exports = {
 
         var like = $('.like-btn');
         var unlike = $('.unlike-btn');
+
         //al darle al boton like nectro
-        $(like).on('click', function (e) {
-            e.preventDefault();
+        $(like).on('click', function () {
             //cogemos el valor del atributo data del padre del boton que tenga la clase post
             var articleId = $(this).parents('.post').data('id');
             //creamos una lista vacia donde figuren todos los articlesID
@@ -28,6 +28,7 @@ module.exports = {
                 //le añadimos la clase unshown al boton
                 $(this).removeClass().addClass(localStorage.getItem(likeItem));
                 //Mostramos el corazon rojo
+
                 unlike.removeClass().addClass('shown');
             }
         })
@@ -38,8 +39,8 @@ module.exports = {
         var like = $('.like-btn');
         var unlike = $('.unlike-btn');
 
-        $(unlike).on('click', function(e){
-            e.preventDefault();
+        $(unlike).on('click', function(){
+
             var articleId = $(this).parents('.post').data('id');
 
             if(articleId) {
