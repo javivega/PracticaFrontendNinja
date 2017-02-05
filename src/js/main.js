@@ -4,4 +4,4 @@ require('./comments-services');
 require('./readmore');
 require('./ready');
 require('./scroll');
-
+require('./like-manager');

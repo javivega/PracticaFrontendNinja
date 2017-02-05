@@ -12,19 +12,15 @@
         justify-content: center;
         align-items: center;
         @include if-is-medium-screen {
-            justify-content: flex-start;
+            justify-content: center;
         }
-        .post-autor-img {
+        picture {
             width: 8%;
-            height: auto;
-            border-radius: 8em;
             margin: 0.5em;
-
-             @include if-is-medium-screen {
-            width: 8%;
-
-
-        }
+            .post-autor-img {
+                height: auto;
+                border-radius: 8em;
+            }
         }
     }
     .post-img-detail {

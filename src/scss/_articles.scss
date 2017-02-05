@@ -39,17 +39,27 @@
 			font-size: $font-size-h1;
 			font-family: $titles-font-family;
 			color: lighten($terciary-color, 20%);
-			margin-bottom: 10px;
+			margin: 14px;
 		}
 
         .post-text {
+            text-align: justify;
             @include format-text;
             .texto-oculto {
                 display: none;
                 &.shown {
                     display: block;
                 }
+
             }
+            .leer-mas {
+                display: inline-block;
+                    margin: 12px 0;
+                padding: 6px;
+                background-color: $secondary-color;
+                color: $primary-color;
+                text-decoration: none;
+                }
         }
 
         .post-detail {
@@ -65,11 +75,22 @@
             flex-flow: row wrap;
             justify-content: flex-end;
             a {
+                &.shown {
+                    display: block;
+                }
+                &.unshown {
+                    display: none;
+
+                }
                 text-decoration: none;
                 color: $secondary-color;
                 padding: 0.8em;
                 i.fa-comment {
                     align-self: flex-end;
+                    padding-right: 6px;
+                }
+                i.red {
+                    color: indianred;
                 }
 
 

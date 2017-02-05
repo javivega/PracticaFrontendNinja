@@ -11,6 +11,8 @@ var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
+var imagemin = require('gulp-imagemin');
+var responsive = require('gulp-responsive');
 
 
 //Config
@@ -35,6 +37,37 @@ var uglifyConfig = {
     src: './dist/main.js',
     dest: './dist/'
 }
+
+var imagesConfig = {
+    imagesTaskName: "optimize-images",
+    src: 'src/img/*',
+    dest: "./dist/img/",
+    responsive: {
+        'user-*.jpg': [{
+            width: 50,
+            rename: {suffix: '-50px'}
+        }, {
+            width: 180,
+            rename: {suffix: '-180px'}
+        }],
+        'art-*.jpg': [{//1200,900, 700, 350,
+            width: 1200,
+            rename: {suffix: '-1200px'}
+        }, {
+            width: 900,
+            rename: {suffix: '-900px'}
+        }, {
+            width: 700,
+            rename: {suffix: '-700px'}
+        }, {
+            width: 350,
+            rename: {suffix: '-350px'}
+        }, {
+            width: 175,
+            rename: {suffix: '-175px'}
+        }]
+    }
+};
 
 //Compilamos SASS
 gulp.task(sassConfig.compileSassTaskName, function(){
@@ -70,7 +103,7 @@ gulp.task(jsConfig.concatJsTaskName, function(){
 
 //tarea por defecto
 
-gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName], function(){
+gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName, imagesConfig.imagesTaskName], function(){
 	browserSync.init({
 		proxy: "127.0.0.1:8000"
 	});
@@ -93,6 +126,13 @@ gulp.task(uglifyConfig.uglifyTaskName, function(){
     .pipe(gulp.dest(uglifyConfig.dest))
     .pipe(notify("JS Minificado"));
 })
+
+gulp.task(imagesConfig.imagesTaskName, function(){
+    gulp.src(imagesConfig.src)
+    .pipe(responsive(imagesConfig.responsive))
+    .pipe(imagemin())
+    .pipe(gulp.dest(imagesConfig.dest));
+});
 
 
 
